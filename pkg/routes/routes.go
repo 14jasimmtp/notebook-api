@@ -9,7 +9,7 @@ func Notebook(r *gin.Engine,svc *api.Service){
 	r.GET("/notes/all",svc.ShowAllNotes)
 	r.GET("/notes",svc.ShowOneNote)
 
-	r.POST("/notes/delete",svc.DeleteNote)
+	r.DELETE("/notes/delete",svc.DeleteNote)
 	r.PUT("/notes/edit",svc.EditNote)
 	r.POST("/notes/add",svc.AddNote)
 }
